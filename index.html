@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- Our App mounts to this ID -->
+<div id="app">
+
+    <section class="blogWrap">
+        <div class="blogWrap__inner">
+
+            <div class="blogList">
+
+                <ul>
+                    <li v-for="post in posts" @click="selectPost(post.ID)">{{post.title}}</li>
+                </ul>
+
+            </div>
+
+            <article class="blogPost">
+                <header>
+                    <h1 class="blogPost__title">
+                        {{selectedPost.title}}
+                    </h1>
+                </header>
+                <div class="blogPost__body" v-html="selectedPost.content">
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+</div>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

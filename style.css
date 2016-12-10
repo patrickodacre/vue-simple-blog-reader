@@ -1,0 +1,31 @@
+.blogWrap__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.blogList,
+.blogPost {
+    padding: 1rem;
+}
+
+.blogList {
+    flex: 1 1 auto;
+    max-width: 30%;
+}
+
+.blogList li:hover {
+    cursor: pointer;
+    color: forestgreen;
+}
+
+.blogPost {
+    flex: 3 1 auto;
+    max-width: 70%;
+}
+
+.blogPost img {
+    max-width: 100%;
+}
